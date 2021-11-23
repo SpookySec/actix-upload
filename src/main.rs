@@ -3,29 +3,10 @@ use std::fs::File;
 use std::io::Read;
 use std::io::Write;
 use futures_util::StreamExt;
-use uuid::Uuid;
-use colored::*;
 
-// A success println
-fn success(msg: &str) {
-    println!("{} {}", "✔".green(), msg);
-}
-
-// A warning println
-fn warning(msg: &str) {
-    println!("{} {}", "⚠".yellow(), msg);
-}
-
-// An error println
-fn error(msg: &str) {
-    println!("{} {}", "✖".red(), msg);
-}
-
-// Generate a unique UUID for the file name
-fn generate_uuid() -> String {
-    let uuid = Uuid::new_v4();
-    uuid.to_string()
-}
+// src/utils.rs
+mod utils;
+use utils::*;
 
 /*
     This method takes a PUT request and uploads the file to the server

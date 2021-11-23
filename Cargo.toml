@@ -1,0 +1,15 @@
+[package]
+name = "actix-upload"
+version = "0.1.0"
+authors = ["SpookySec <anonymousbot100110@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "3"
+futures = "0.3.17"
+futures-util = "0.3.13"
+futures-core = "0.3.17"
+uuid = { version = "0.8", features = ["v4"] }
+colored = "2.0.0"
